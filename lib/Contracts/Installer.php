@@ -27,9 +27,9 @@ interface Installer
      *
      * @param Metadata $metadata
      *
-     * @return boolean
+     * @return bool
      */
-    function installed(Metadata $metadata): boolean;
+    function installed(Metadata $metadata): bool;
 
 
     /**
