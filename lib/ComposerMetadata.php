@@ -21,9 +21,9 @@ final class ComposerMetadata extends BasicMetadata
         }
 
         parent::__construct(
-            $reader->contentSection('name'),
+            $reader->contentSection('name', ''),
             $name,
-            $reader->contentSection('version'),
+            $reader->contentSection('version', ''),
             $provided
         );
     }
