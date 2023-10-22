@@ -10,7 +10,7 @@ class Metadata
 
     private string $version;
 
-    protected function __constructor()
+    protected function __construct()
     {
     }
 
