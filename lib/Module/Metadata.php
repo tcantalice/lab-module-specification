@@ -4,23 +4,12 @@ namespace Lab\Specification\Module;
 
 class Metadata
 {
-    private string $identifier;
-
-    private string $name;
-
-    private string $version;
-
-    protected function __construct()
-    {
-    }
-
-    /**
-     * @return Metadata
-     */
-    public static function make(): Metadata
-    {
-        return new Metadata();
-    }
+    protected function __construct(
+        private string $identifier,
+        private string $name,
+        private string $version
+    )
+    {}
 
     function getIdentifier(): string
     {
