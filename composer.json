@@ -1,0 +1,13 @@
+{
+  "name": "lab-specification",
+  "version": "0.0.1",
+  "require": {
+    "php": "^8.2"
+  },
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Lab\\Specification": "lib/"
+    }
+  }
+}
