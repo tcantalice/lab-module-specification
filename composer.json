@@ -1,13 +1,19 @@
 {
-  "name": "tcantalice/lab-specification",
+  "name": "tcantalice/lab-specs-module",
   "version": "0.0.1",
   "require": {
-    "php": "^8.2"
+    "php": "^8.2",
+    "nadar/php-composer-reader": "2.0.0"
   },
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Lab\\Specification\\": "lib/"
+      "Lab\\Specification\\Module\\": "lib/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "latest"
     }
   }
 }
