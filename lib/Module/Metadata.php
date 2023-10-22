@@ -2,7 +2,9 @@
 
 namespace Lab\Specification\Module;
 
-class Metadata
+use Lab\Specification\Module\Contracts\Metadata as Contract;
+
+abstract class Metadata implements Contract
 {
     protected function __construct(
         private string $identifier,
