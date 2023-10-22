@@ -27,4 +27,9 @@ interface Metadata
      * @return string
      */
     public function getName(): string;
+
+    /**
+     * @return string[]
+     */
+    public function providedServices(): array;
 }

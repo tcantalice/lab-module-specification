@@ -2,14 +2,12 @@
 
 namespace Lab\Specification\Module\Contracts;
 
-use Lab\Specification\Module\Metadata;
-
 interface Module
 {
     /**
      * @return Metadata
      */
-    function metadata();
+    function getMetadata(): Metadata;
 
     /**
      * Registra o módulo e o torna disponível para a aplicação durante a execução
@@ -17,7 +15,7 @@ interface Module
      * @param Register $register
      * @return void
      */
-    function register(Register $register);
+    function register(Register $register): void;
 
     /**
      * Inicializa o módulo após todo o registro ter sido realizado
@@ -26,22 +24,12 @@ interface Module
      *
      * @return void
      */
-    function initialize(Register $register);
-
-    /**
-     * @return boolean
-     */
-    function initialized();
+    function initialize(Register $register): void;
 
     /**
      * @return void
      */
     function install(Installer $installer);
-
-    /**
-     * @return boolean
-     */
-    function installed();
 
     /**
      * Desinstala todos os artefatos do
