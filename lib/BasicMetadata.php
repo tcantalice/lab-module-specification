@@ -2,16 +2,18 @@
 
 namespace Lab\Specification\Module;
 
-use Lab\Specification\Module\Contracts\Metadata as Contract;
+use Lab\Specification\Module\Contracts\Metadata;
 
-abstract class Metadata implements Contract
+class BasicMetadata implements Metadata
 {
-    protected function __construct(
+    public function __construct(
         private string $identifier,
         private string $name,
-        private string $version
-    )
-    {}
+        private string $version,
+        private array $provided
+    ) {
+        //
+    }
 
     function getIdentifier(): string
     {
@@ -35,5 +37,10 @@ abstract class Metadata implements Contract
             "name" => $this->getName(),
             "version" => $this->getVersion(),
         ];
+    }
+
+    public function providedServices(): array
+    {
+        return $this->provided;
     }
 }
